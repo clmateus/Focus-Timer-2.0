@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding: 1.2rem;
+}
+
+.timer {
+  font-size: 7.2rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.controls button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.ambience-buttons {
+  display: grid;
+  grid-template:
+    "A B"
+    "C D";
+    gap: 1.6rem;
+}
+
+.ambience-buttons button {
+    border: none;
+    border-radius: 2.4rem;
+    background: #e1e1e6;
+    padding: 2.4rem;
+    cursor: pointer;
+}
+
+.forest-button {
+  grid-area: A;
+}
+
+.rain-button {
+  grid-area: B;
+}
+
+.coffee-shop-button {
+  grid-area: C;
+}
+
+.fireplace-button {
+  grid-area: D;
+}
+
+.ambience-buttons .selected {
+    background: #02799d;
+}
+
+.ambience-buttons .selected svg path{
+    fill: #ffffff;
+}
+
+@media (min-width: 768px) {
+    body {
+        display: grid;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+    }
+
+    .timer {
+        font-size: 12.6rem;
+    }
+
+    .controls {
+        gap: 4.0rem;
+    }
+
+    .timer-and-controls {
+        margin-right: 8.0rem;
+    }
+
+    .ambience-buttons {
+          gap: 3.2rem;
+      }
+      
+      .ambience-buttons button {
+          padding: 4.8rem;
+      }
+}
